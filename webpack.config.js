@@ -3,7 +3,7 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    entry: './js/app.js',
+    entry: './src/js/index.js',
 
     mode: 'development',
 
@@ -23,11 +23,6 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.js$/,
-                exclude: /node_modules/,
-                use: 'babel-loader'
-            },
-            {
                 test: /\.scss$/,
                 use: [
                     'style-loader',
@@ -39,7 +34,7 @@ module.exports = {
     },
 
     plugins: [
-        new HtmlWebpackPlugin({template: './index.html'}),
+        new HtmlWebpackPlugin({template: './public/index.html'}),
         new webpack.HotModuleReplacementPlugin(),
     ]
 };
