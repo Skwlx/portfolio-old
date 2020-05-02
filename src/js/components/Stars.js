@@ -1,5 +1,5 @@
 class Stars{
-    constructor(canvas) {
+    constructor(canvas){
     this.canvas = document.querySelector("#canvas");
     this.ctx = canvas.getContext("2d");
     this.width = window.innerWidth;
@@ -15,12 +15,14 @@ class Stars{
 
     drawStar(star){
       this.ctx.save();
-      this.fillStyle = star.color;
+      this.ctx.fillStyle = star.color;
       this.ctx.beginPath();
       this.ctx.translate(star.x, star.y);
       this.ctx.moveTo(0, 0 - star.radius);
         for(let i = 0; i < 5; i++){
-            this.ctx.rotate((Math.PI / 180) * 72);
+            this.ctx.rotate((Math.PI / 180) * 36);
+            this.ctx.lineTo(0, 0 - star.radius * 0.5);
+            this.ctx.rotate((Math.PI / 180) * 36);
             this.ctx.lineTo(0, 0 - star.radius);
         }
       this.ctx.fill()
@@ -30,16 +32,17 @@ class Stars{
     draw(){
         console.log("draw");
         window.requestAnimationFrame(() => this.draw());
+        this.drawStar({
+            x:40,
+            y:40,
+            color: '#fff',
+            radius: 10,
+        })
     }
 
     run(){
         this.initCanvas();
-        this.drawStar({
-            x:20,
-            y:20,
-            color: "red",
-            radius: 30
-        });
+        this.draw();
     }
 }
 
