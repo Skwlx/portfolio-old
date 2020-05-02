@@ -1,4 +1,5 @@
 import Writing from './components/machineWriting';
+import Stars from './components/Stars';
 import "../sass/index.scss";
-console.log(Writing);
-
+const star = new Stars(document.querySelector("#canvas"));
+console.log(star);

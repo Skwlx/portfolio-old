@@ -1,12 +1,11 @@
 .jumbotron{
     height: 100%;
     background-color: $main-color;
-    display: flex;
-    justify-content: center;
-    align-content: center;
+
 }
 
 .jumbotron__console-window{
+    display: none;
     background-color: $second-color;
     box-sizing: border-box;
     border-radius: 10px;
