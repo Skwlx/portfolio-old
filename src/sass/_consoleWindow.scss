@@ -5,11 +5,43 @@
 }
 
 .jumbotron__console-window{
-    display: none;
     background-color: $second-color;
     box-sizing: border-box;
     border-radius: 10px;
-    width: 50%;
+    background-color: $main-color;
+    border: 0.1px solid $second-color;
+    color: green;
+    width: 45%;
     height: 50%;
     margin: auto;
+    max-width: 700px;
+    min-height: 250px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.jumbotron__console-window__bar{
+    width: 100%;
+    height: 20px;
+    background-color: $second-color;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.jumbotron__console-window__bar__button{
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background-color: red;
+    display: inline-block;
+    margin-left: $marginS;
+    margin-top: $marginS;
+
+}
+.jumbotron__console-window__bar__button:nth-child(2){
+    background-color: darken(yellow, 3%);
+}
+.jumbotron__console-window__bar__button:nth-child(3){
+    background-color: darken(green, 3%);
 }
