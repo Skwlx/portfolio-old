@@ -1,14 +1,21 @@
 class Writing{
     constructor(){
-        this.message = ["Witaj, nazywam się Paweł", "Junior front-end", "Web developer", "Student Informatyki"]
-        this.text = document.querySelector(".jumbotron__console-window__text");
+        this.message = ["Witaj, nazywam się Paweł", " jestem początkującym programistą,", " web developerem,", " front-endowcem. Dobrze cie widzieć."," #Front-end"," #Js", " #Freelance"];
+        this.textBox = document.querySelector(".jumbotron__console-window__text");
         this.wordIndex = 0;
+        this.messageIndex = 0;
     }
     type(){
-        this.message.forEach(word => {
-            const letter = word[this.wordIndex];
-            this.text.textContent += letter;
-        });
+        if(this.messageIndex > this.message.length -1)
+            return 0;
+        const letter = this.message[this.messageIndex].substr(this.wordIndex,1);
+        this.textBox.textContent += `${letter}`;
+        this.wordIndex++;
+        if(this.wordIndex === this.message[this.messageIndex].length){
+            this.messageIndex++;
+            this.wordIndex = 0;
+        }
+        setTimeout(()=>{requestAnimationFrame(() => this.type())}, 80);
     }
 }
 

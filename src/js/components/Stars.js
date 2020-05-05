@@ -19,9 +19,9 @@ class Stars{
             stars.push({
                 x: Math.random() * this.width,
                 y: Math.random() * this.height,
-                radius: 5,
+                radius: Math.random() * 2 + 5,
                 color: "#fff",
-                speed: Math.random() + 0.5,
+                speed: Math.random() + 0.2,
             })
         }
         this.stars = stars;
