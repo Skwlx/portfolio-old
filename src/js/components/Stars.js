@@ -52,8 +52,12 @@ class Stars{
     animateStars(){
         this.stars.forEach(star =>{
             star.y += star.speed;
+            star.x += star.speed - 0.3;
             if(star.y >= this.height){
                 star.y = 0;
+            }
+            if(star.x >= this.width){
+                star.x = 0;
             }
         })
     }
@@ -63,11 +67,21 @@ class Stars{
         this.ctx.fillRect(0,0, this.width, this.height);
     }
 
+    resize(){
+        this.width = window.innerWidth;
+        this.height = window.innerHeight;
+        this.canvas.width = this.width;
+        this.canvas.height = this.height;
+    }
+
     draw(){
         this.resetCanvas();
         this.drawStars();
         this.animateStars();
         window.requestAnimationFrame(() => this.draw());
+        window.addEventListener("resize", ()=>{
+            this.resize();
+        })
     }
 
     run(){
@@ -76,7 +90,7 @@ class Stars{
             this.generateStars(100);
         }
         else{
-            this.generateStars(320);
+            this.generateStars(340);
         }
         this.draw();
     }

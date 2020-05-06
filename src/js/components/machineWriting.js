@@ -1,10 +1,16 @@
 class Writing{
     constructor(){
-        this.message = ["Witaj, nazywam się Paweł", " jestem początkującym programistą,", " web developerem,", " front-endowcem. Dobrze cie widzieć."," #Front-end"," #Js", " #Freelance"];
+        this.message = ["Witaj, nazywam się Paweł",
+         " jestem początkującym programistą,", 
+        " web developerem,", 
+        " front-endowcem. Dobrze cie widzieć."
+        ," #Front-end"," #Js", 
+        " #Freelance"];
         this.textBox = document.querySelector(".jumbotron__console-window__text");
         this.wordIndex = 0;
         this.messageIndex = 0;
     }
+
     type(){
         if(this.messageIndex > this.message.length -1)
             return 0;

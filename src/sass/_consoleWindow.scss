@@ -1,7 +1,6 @@
 .jumbotron{
     height: 100%;
     background-color: $main-color;
-
 }
 
 .jumbotron__console-window{
@@ -15,6 +14,7 @@
     height: 50%;
     margin: auto;
     max-width: 700px;
+    min-width: 300px;
     min-height: 250px;
     position: absolute;
     top: 50%;
@@ -38,18 +38,24 @@
     display: inline-block;
     margin-left: $marginS;
     margin-top: $marginS;
-
-}
-.jumbotron__console-window__bar__button:nth-child(2){
-    background-color: darken(yellow, 3%);
-}
-.jumbotron__console-window__bar__button:nth-child(3){
-    background-color: darken(green, 3%);
+    &:nth-child(2){
+        background-color: darken(yellow, 3%);
+    }
+    &:nth-child(3){
+        background-color: darken(green, 3%);
+    }
 }
 
 .jumbotron__console-window__text{
-    font-size: $fontSizeM;
+    font-size: $fontSizeB;
     font-family: $second-font;
     text-shadow: 2px 1px 1px rgba(0, 250, 0, 1);
+    padding: 0 5px 0 5px;
+    &::after{
+        content: "_";
+        animation: consoleBlink 0.4s infinite linear;
+    }
 }
+
+  
 

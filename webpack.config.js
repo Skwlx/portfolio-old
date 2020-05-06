@@ -1,6 +1,8 @@
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const MediaQueryPlugin = require('media-query-plugin');
 
 module.exports = {
     entry: './src/js/index.js',
@@ -9,7 +11,7 @@ module.exports = {
 
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: '[name].bundle.js',
+        filename: 'js/bundle.js',
         publicPath: '/'
     },
 
@@ -25,7 +27,13 @@ module.exports = {
             {
                 test: /\.scss$/,
                 use: [
-                    'style-loader',
+                    {
+                        loader: MiniCssExtractPlugin.loader,
+                        options: {
+                          esModule: true,
+                        },
+                      },
+                    MediaQueryPlugin.loader,
                     'css-loader',
                     'sass-loader',
                 ]
@@ -36,5 +44,16 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({template: './public/index.html'}),
         new webpack.HotModuleReplacementPlugin(),
+        new MiniCssExtractPlugin({
+            filename: 'styles/main.css',
+        }), 
+        new MediaQueryPlugin({
+            include: [
+                'example'
+            ],
+            queries: {
+                'print, screen and (min-width: 75em)': 'desktop'
+            }
+        })
     ]
 };
