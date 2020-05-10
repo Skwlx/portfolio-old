@@ -2,9 +2,11 @@ body{
     font-family: $main-font;
     margin: 0;
     padding: 0;
+    color: $second-color;
 }
 
 main{
     width: 100%;
     height: 100vh;
+    overflow-x: hidden;
 }

@@ -1,6 +1,7 @@
 .jumbotron{
     height: 100%;
     background-color: $main-color;
+    position: relative;
 }
 
 .jumbotron__console-window{
@@ -15,7 +16,7 @@
     margin: auto;
     max-width: 700px;
     min-width: 300px;
-    min-height: 250px;
+    min-height: 350px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -34,15 +35,15 @@
     width: 10px;
     height: 10px;
     border-radius: 100%;
-    background-color: red;
+    background-color: darken(red,10%);
     display: inline-block;
     margin-left: $marginS;
     margin-top: $marginS;
     &:nth-child(2){
-        background-color: darken(yellow, 3%);
+        background-color: darken(orange, 3%);
     }
     &:nth-child(3){
-        background-color: darken(green, 3%);
+        background-color: darken(green, 1%);
     }
 }
 
