@@ -63,7 +63,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "31f66c0915d4321590f6";
+/******/ 	var hotCurrentHash = "c774eb96fa9b37f5827e";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -891,7 +891,7 @@ eval("__webpack_require__.r(__webpack_exports__);\nclass Writing{\n    construct
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _components_machineWriting__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/machineWriting */ \"./src/js/components/machineWriting.js\");\n/* harmony import */ var _components_Stars__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/Stars */ \"./src/js/components/Stars.js\");\n/* harmony import */ var _sass_index_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../sass/index.scss */ \"./src/sass/index.scss\");\n/* harmony import */ var _sass_index_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_sass_index_scss__WEBPACK_IMPORTED_MODULE_2__);\n\n\n\n\nwindow.addEventListener('DOMContentLoaded', () => {\n    const star = new _components_Stars__WEBPACK_IMPORTED_MODULE_1__[\"default\"](document.querySelector(\"#canvas\"));\n    const write = new _components_machineWriting__WEBPACK_IMPORTED_MODULE_0__[\"default\"]();\n    write.type();\n    star.run();\n});\n\n//# sourceURL=webpack:///./src/js/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _components_machineWriting__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/machineWriting */ \"./src/js/components/machineWriting.js\");\n/* harmony import */ var _components_Stars__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/Stars */ \"./src/js/components/Stars.js\");\n/* harmony import */ var _sass_index_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../sass/index.scss */ \"./src/sass/index.scss\");\n/* harmony import */ var _sass_index_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_sass_index_scss__WEBPACK_IMPORTED_MODULE_2__);\n\n\n\n// import js from \"../pictures/js.png\";\n// import html from \"../pictures/html.png\";\n// import css from \"../pictures/css.png\";\n// import webpack from \"../pictures/webpack.png\";\n// import sass from \"../pictures/sass.png\";\n// //import me from \"../pictures/me.jpg\";\n\nwindow.addEventListener('DOMContentLoaded', () => {\n    const star = new _components_Stars__WEBPACK_IMPORTED_MODULE_1__[\"default\"](document.querySelector(\"#canvas\"));\n    const write = new _components_machineWriting__WEBPACK_IMPORTED_MODULE_0__[\"default\"]();\n    write.type();\n    star.run();\n});\n\n//# sourceURL=webpack:///./src/js/index.js?");
 
 /***/ }),
 

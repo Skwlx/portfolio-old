@@ -73,13 +73,31 @@ canvas {
 
 .about-me {
   width: 100vw;
-  height: 100vh;
-  background-color: #4d4d4d; }
-  .about-me h2 {
+  height: 50vh;
+  background-color: #4d4d4d;
+  display: flex;
+  margin: 0; }
+
+.about-me__box {
+  background-color: black;
+  box-shadow: 0px 2px 25px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 20px;
+  width: 90%;
+  margin: auto;
+  padding: 50px;
+  color: black; }
+  .about-me__box h2 {
     margin: 0;
-    color: white;
-    margin-left: 100px;
-    padding-top: 3%; }
+    padding: 10px 0 20px 10px;
+    text-align: left; }
+
+.about-me__text {
+  background-color: white;
+  border-radius: 20px;
+  padding-bottom: 50px;
+  box-shadow: 0px 2px 25px 0px rgba(255, 255, 255, 0.75); }
+  .about-me__text p {
+    margin-left: 10px; }
 
 @media (min-width: 320px) and (max-width: 480px) {
   .jumbotron__console-window__text {
