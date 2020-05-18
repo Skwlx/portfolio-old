@@ -7,6 +7,7 @@ import "../sass/index.scss";
 // import webpack from "../pictures/webpack.png";
 // import sass from "../pictures/sass.png";
 // //import me from "../pictures/me.jpg";
+import portfolio from "../images/portfolio.png";
 
 window.addEventListener('DOMContentLoaded', () => {
     const star = new Stars(document.querySelector("#canvas"));

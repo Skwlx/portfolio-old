@@ -4,23 +4,11 @@
   100% {
     opacity: 1; } }
 
-@keyframes lightIn {
+@keyframes linkUp {
   0% {
-    opacity: 0; }
-  30% {
-    opacity: 1; }
-  45% {
-    opacity: 0; }
-  50% {
-    opacity: 1; }
-  70% {
-    opacity: 0; }
-  80% {
-    opacity: 1; }
-  85% {
-    opacity: 0; }
+    text-shadow: 2px 1px 11px; }
   100% {
-    opacity: 1; } }
+    text-shadow: -2px -1px 0px; } }
 
 body {
   font-family: "Montserrat", sans-serif;
@@ -101,7 +89,7 @@ canvas {
   box-shadow: 0px 2px 25px 0px rgba(0, 0, 0, 0.75);
   border-radius: 20px;
   width: 90%;
-  margin: auto;
+  margin: auto 10%;
   padding: 50px;
   color: black; }
   .about-me__box h2 {
@@ -110,9 +98,8 @@ canvas {
     text-align: left; }
 
 .about-me__text {
-  animation: lightIn 4s 1 ease-in;
   background-color: white;
-  font-family: "Quantico", sans-serif;
+  font-family: "Montserrat", sans-serif;
   border-radius: 20px;
   padding-bottom: 20px;
   box-shadow: 0px 2px 25px 0px rgba(255, 255, 255, 0.75); }
@@ -121,16 +108,92 @@ canvas {
     margin-right: 30px; }
 
 .skill-set {
-  background-color: #4d4d4d;
-  height: 150vh;
+  background-color: black;
+  height: 120vh;
   width: 100%;
   position: relative;
-  display: flex; }
+  display: flex;
+  justify-content: left;
+  flex-wrap: wrap; }
   .skill-set svg {
-    width: 150%;
     position: absolute;
-    bottom: 0;
-    z-index: 0; }
+    top: 0;
+    z-index: 0;
+    transform: rotate(180deg);
+    fill: #4d4d4d;
+    width: 120%; }
+  .skill-set h1 {
+    width: 100%;
+    height: 5%;
+    margin-bottom: 0;
+    z-index: 1;
+    text-align: center; }
+
+.skill-set__column {
+  width: 100%;
+  min-width: 520px;
+  height: 100vh;
+  min-height: 635px;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  margin-top: 40px; }
+  .skill-set__column .skill-set__column__header {
+    animation: linkUp .8s ease-in infinite alternate;
+    margin-top: 15px;
+    text-shadow: 2px 1px 11px;
+    font-size: 1.65rem; }
+  .skill-set__column .skill-set__column_content {
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom: 5px solid white;
+    margin: auto 15px; }
+  .skill-set__column .skill-set__column__skills__elements {
+    padding: 0;
+    list-style: none; }
+    .skill-set__column .skill-set__column__skills__elements li {
+      margin-top: 10px;
+      font-size: 1.2rem; }
+
+.skill-set__column_content-basic {
+  grid-row: 2/3;
+  grid-column: 2/3;
+  border-left: 5px solid white;
+  border-right: 5px solid white; }
+
+.skill-set__column_content-frameworks {
+  grid-row: 1/2;
+  grid-column: 3/4; }
+
+.projects {
+  width: 100%;
+  height: 50vh;
+  background-color: black;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+  .projects h2 {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 100%; }
+
+.projects__projectBox {
+  width: 33%;
+  text-align: center;
+  background-color: red; }
+
+.projects__projectBox__button {
+  color: white;
+  text-decoration: none;
+  background-color: grey;
+  padding: 5px;
+  margin: auto 5px; }
 
 @media (min-width: 320px) and (max-width: 480px) {
   .jumbotron__console-window__text {
