@@ -1,12 +1,11 @@
 .skill-set{
     background-color: $main-color;
-    height: 150vh;
+    height: 120vh;
     width: 100%;
     position: relative;
     display: flex;
-    justify-content: space-around;
+    justify-content: left;
     flex-wrap: wrap;
-    text-align: center;
     svg{
         position: absolute;
         top: 0;
@@ -20,51 +19,51 @@
         height: 5%;
         margin-bottom: 0;
         z-index: 1;
+        text-align: center;
     }
 }
 
 .skill-set__column{
-    width: 40%;
+    width: 100%;
     min-width: 520px;
     height: 100vh;
+    min-height: 635px;
     z-index: 1;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     margin-top: 40px;
-    border-radius: 20px;
-    border-bottom: 10px solid;
-    border-top: 12px solid;
     .skill-set__column__header{
-        text-shadow: 2px 2px 12px;
-        margin-top: 40px;
-    }
-    .skill-set__column__content{
-        margin: auto 10px auto 10px;
-    }
-    .skill-set__column__skills{
+        animation: linkUp 1s ease-in infinite alternate;
         margin-top: 15px;
-        text-shadow: 2px 1px 9px;
+        text-shadow: 2px 1px 11px;
+        font-size: $fontSizeB*1.1;
+    }
+    .skill-set__column_content{
+        text-align: center;
+        padding-bottom: 20px;
+        border-bottom-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+        border-bottom: 5px solid $second-color;
+        margin: auto 15px;
     }
     .skill-set__column__skills__elements{
         padding: 0;
         list-style: none;
         li{
             margin-top: 10px;
+            font-size: $fontSizeM*1.2;
         }
     }
 }
 
-.skill-set__column-programming{
-    background-color: $second-color;
-    color: $main-color;
-    box-shadow: 0px 2px 25px 0px rgba(0, 0, 0, 0.75);
-    border-color: $third-color;
-    h2{
-        text-shadow: $second-color;
-    }
+
+.skill-set__column_content-basic{
+    grid-row: 2/3;
+    grid-column: 2/3
 }
 
-.skill-set__column-person {
-    background-color: $third-color;
-    border-color: $second-color;
-    box-shadow: 0px 2px 25px 0px rgba(0, 0, 0, 0.75);
+.skill-set__column_content-frameworks{
+    grid-row: 1/2;
+    grid-column: 3/4;
 }
