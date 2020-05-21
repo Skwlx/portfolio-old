@@ -4,17 +4,19 @@ body{
     margin: 0;
     padding: 0;
     color: $second-color;
+    overflow-x: hidden;
 }
 
 main{
     width: 100%;
-    height: 100vh;
-    overflow-x: hidden;
     z-index: 1;
+    margin: 0;
 }
 
 footer{
     width: 100%;
     height: 20vh;
+    margin-top: 7%;
     z-index: 1;
+    color: $main-color;
 }

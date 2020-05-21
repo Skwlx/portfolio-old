@@ -1,8 +1,7 @@
 .projects{
-    width: 100%;
     background-color: $main-color;
-    margin: 0;
-    padding: 0;
+    margin: auto 0;
+    padding-bottom: 50px;
     display: flex;
     position: relative;
     flex-wrap: wrap;
@@ -30,6 +29,8 @@
     box-shadow: -1px 1px 15px $second-color;
     min-width: 450px;
     min-height: 250px;
+    max-width: 500px;
+    max-height: 500px;
     margin: 20px 0;
     text-align: center;
     background-color: red;
@@ -43,7 +44,7 @@
 }
 
 .projects__projectBox__content{
-    width: 150px;
+    width: 50%;
     margin: auto;
     margin-bottom: 50px;
     font-size: $fontSizeM*1.2;
@@ -66,6 +67,11 @@
 }
 .portfolio{
     background-image: url("/images/portfolio.png");
+    background-size: cover;
+}
+
+.tic_tac_toe{
+    background-image: url("/images/tictactoe.png");
     background-size: cover;
 }
 
