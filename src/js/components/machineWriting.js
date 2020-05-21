@@ -5,7 +5,7 @@ class Writing{
         " web developerem,", 
         " front-endowcem. Dobrze cie widzieć."
         ," #Front-end"," #Js", 
-        " #💻"];
+        ];
         this.textBox = document.querySelector(".jumbotron__console-window__text");
         this.wordIndex = 0;
         this.messageIndex = 0;
