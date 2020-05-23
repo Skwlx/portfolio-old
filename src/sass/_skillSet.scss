@@ -58,6 +58,14 @@
             margin: auto;
             margin-top: 10px;
             font-size: $fontSizeM*1.2;
+            &::after{
+                opacity: 0;
+                content: "";
+                width: 40%;
+                display: block;
+                height: 2px;
+                margin: auto;
+            }
         }
     }
 }
@@ -79,12 +87,12 @@
 
 .skill-set__column__skills__elements--animated{
     &::after{
-        animation: displayIn 2s .5s linear;
+        animation: displayIn 3s linear;
         opacity: 0;
         content: "";
         width: 40%;
         display: block;
-        height: 1px;
+        height: 2px;
         background-color: #fff;
         margin: auto;
     }

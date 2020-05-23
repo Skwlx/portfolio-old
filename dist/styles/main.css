@@ -11,10 +11,15 @@
     text-shadow: -2px -1px 0px; } }
 
 @keyframes displayIn {
-  0% { }
-  25% { }
-  75% { }
-  100% { } }
+  0% {
+    opacity: 1;
+    transform: scaleX(0.2); }
+  25% {
+    transform: scaleX(1); }
+  75% {
+    transform: scaleX(0.2); }
+  100% {
+    transform: scaleX(1); } }
 
 body {
   font-family: "Montserrat", sans-serif;
@@ -175,12 +180,13 @@ canvas {
       margin: auto;
       margin-top: 10px;
       font-size: 1.2rem; }
-      .skill-set__column .skill-set__column__skills__elements .skill-set__column__skills__element::before {
+      .skill-set__column .skill-set__column__skills__elements .skill-set__column__skills__element::after {
+        opacity: 0;
         content: "";
-        width: 100%;
+        width: 40%;
         display: block;
-        height: 1px;
-        color: red; }
+        height: 2px;
+        margin: auto; }
 
 .skill-set__column_content-basic {
   grid-row: 2/3;
@@ -192,14 +198,15 @@ canvas {
   grid-row: 1/2;
   grid-column: 3/4; }
 
-.skill-set__column__skills__elements--animated {
-  animation: displayIn 1s .5s linear 3; }
-  .skill-set__column__skills__elements--animated::before {
-    content: "";
-    width: 100%;
-    display: block;
-    height: 1px;
-    color: red; }
+.skill-set__column__skills__elements--animated::after {
+  animation: displayIn 3s .5s linear;
+  opacity: 0;
+  content: "";
+  width: 40%;
+  display: block;
+  height: 2px;
+  background-color: #fff;
+  margin: auto; }
 
 .projects {
   background-color: black;

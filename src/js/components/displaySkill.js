@@ -5,16 +5,19 @@ class displaySkill {
         this.displayBox = this.box.getBoundingClientRect();
         Array(this.listEl);
     }
-    
-    getViewPort(){
-        this.displayBox = this.box.getBoundingClientRect();
-    }
 
     init(){
         this.displayBox = this.box.getBoundingClientRect();
             if(this.displayBox.top < 0){
+            this.listEl.forEach((li, time)=>{
+                setTimeout(() => {
+                li.classList.add("skill-set__column__skills__elements--animated");
+                }, time * 250);
+            })
+        }
+        else{
             this.listEl.forEach((li)=>{
-                li.classList.add("skill-set__column__skills__elements--animated")
+                li.classList.remove("skill-set__column__skills__elements--animated");
             })
         }
     }
