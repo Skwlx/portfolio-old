@@ -63,7 +63,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "b3e801a81e2f79aab084";
+/******/ 	var hotCurrentHash = "228a2a9de608eca9c359";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -895,6 +895,18 @@ eval("__webpack_require__.r(__webpack_exports__);\nclass Stars{\n    constructor
 
 /***/ }),
 
+/***/ "./src/js/components/displaySkill.js":
+/*!*******************************************!*\
+  !*** ./src/js/components/displaySkill.js ***!
+  \*******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\nclass displaySkill {\n    constructor(){\n        this.box = document.querySelector(\".skill-set\");\n        this.listEl = document.querySelectorAll(\".skill-set__column__skills__element\");\n        this.displayBox = this.box.getBoundingClientRect();\n        Array(this.listEl);\n    }\n    \n    getViewPort(){\n        this.displayBox = this.box.getBoundingClientRect();\n    }\n\n    init(){\n        this.displayBox = this.box.getBoundingClientRect();\n            if(this.displayBox.top < 0){\n            this.listEl.forEach((li)=>{\n                li.classList.add(\"skill-set__column__skills__elements--animated\")\n            })\n        }\n    }\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (displaySkill);\n\n//# sourceURL=webpack:///./src/js/components/displaySkill.js?");
+
+/***/ }),
+
 /***/ "./src/js/components/machineWriting.js":
 /*!*********************************************!*\
   !*** ./src/js/components/machineWriting.js ***!
@@ -915,7 +927,7 @@ eval("__webpack_require__.r(__webpack_exports__);\nclass Writing{\n    construct
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _components_machineWriting__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/machineWriting */ \"./src/js/components/machineWriting.js\");\n/* harmony import */ var _components_Stars__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/Stars */ \"./src/js/components/Stars.js\");\n/* harmony import */ var _sass_index_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../sass/index.scss */ \"./src/sass/index.scss\");\n/* harmony import */ var _sass_index_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_sass_index_scss__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _images_portfolio_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../images/portfolio.png */ \"./src/images/portfolio.png\");\n/* harmony import */ var _images_tictactoe_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../images/tictactoe.png */ \"./src/images/tictactoe.png\");\n\n\n\n\n\n\nwindow.addEventListener('DOMContentLoaded', () => {\n    const star = new _components_Stars__WEBPACK_IMPORTED_MODULE_1__[\"default\"](document.querySelector(\"#canvas\"));\n    const write = new _components_machineWriting__WEBPACK_IMPORTED_MODULE_0__[\"default\"]();\n    write.type();\n    star.run();\n});\n\n//# sourceURL=webpack:///./src/js/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _components_machineWriting__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/machineWriting */ \"./src/js/components/machineWriting.js\");\n/* harmony import */ var _components_Stars__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/Stars */ \"./src/js/components/Stars.js\");\n/* harmony import */ var _components_displaySkill__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/displaySkill */ \"./src/js/components/displaySkill.js\");\n/* harmony import */ var _sass_index_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../sass/index.scss */ \"./src/sass/index.scss\");\n/* harmony import */ var _sass_index_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_sass_index_scss__WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var _images_portfolio_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../images/portfolio.png */ \"./src/images/portfolio.png\");\n/* harmony import */ var _images_tictactoe_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../images/tictactoe.png */ \"./src/images/tictactoe.png\");\n\n\n\n\n\n\n\nwindow.addEventListener('DOMContentLoaded', () => {\n    const star = new _components_Stars__WEBPACK_IMPORTED_MODULE_1__[\"default\"](document.querySelector(\"#canvas\"));\n    const write = new _components_machineWriting__WEBPACK_IMPORTED_MODULE_0__[\"default\"]();\n    const display = new _components_displaySkill__WEBPACK_IMPORTED_MODULE_2__[\"default\"]();\n    window.addEventListener('scroll',(e)=>{\n        display.init()\n    });\n    write.type();\n    star.run();\n});\n\n//# sourceURL=webpack:///./src/js/index.js?");
 
 /***/ }),
 
