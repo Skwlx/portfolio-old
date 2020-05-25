@@ -9,7 +9,7 @@
 
 .about-me__box{
     background-color: $main-color;
-    box-shadow: 0px 2px 25px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 2px 25px 0px $main-color;
     border-radius: 20px;
     width: 90%;
     margin: auto 10%;

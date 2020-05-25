@@ -63,7 +63,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "a02b3678068861b86c07";
+/******/ 	var hotCurrentHash = "0c27d295c3aef9ac5884";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -903,7 +903,7 @@ eval("__webpack_require__.r(__webpack_exports__);\nclass Stars{\n    constructor
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\nclass displaySkill {\n    constructor(){\n        this.box = document.querySelector(\".skill-set\");\n        this.listEl = document.querySelectorAll(\".skill-set__column__skills__element\");\n        this.displayBox = this.box.getBoundingClientRect();\n        this.contentHeader = document.querySelectorAll(\".skill-set__column__header\");\n        Array(this.listEl);\n        Array(this.contentHeader);\n    }\n\n    init(){\n        this.displayBox = this.box.getBoundingClientRect();\n            if(this.displayBox.top < 0){\n            this.listEl.forEach((li, time)=>{\n                setTimeout(() => {\n                    li.classList.add(\"skill-set__column__skills__elements--animated\");\n                }, time * 250);\n            })\n        }\n    }\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (displaySkill);\n\n//# sourceURL=webpack:///./src/js/components/displaySkill.js?");
+eval("__webpack_require__.r(__webpack_exports__);\nclass displaySkill {\n    constructor(){\n        this.box = document.querySelector(\".skill-set\");\n        this.listEl = document.querySelectorAll(\".skill-set__column__skills__element\");\n        this.displayBox = this.box.getBoundingClientRect();\n        Array(this.listEl);\n    }\n\n    init(){\n        this.displayBox = this.box.getBoundingClientRect();\n            if(this.displayBox.top < 0){\n            this.listEl.forEach((li, time)=>{\n                setTimeout(() => {\n                li.classList.add(\"skill-set__column__skills__elements--animated\");\n                }, time * 250);\n            })\n        }\n        else{\n            this.listEl.forEach((li)=>{\n                li.classList.remove(\"skill-set__column__skills__elements--animated\");\n            })\n        }\n    }\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (displaySkill);\n\n//# sourceURL=webpack:///./src/js/components/displaySkill.js?");
 
 /***/ }),
 

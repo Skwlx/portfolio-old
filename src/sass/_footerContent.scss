@@ -1,6 +1,21 @@
 .footer__content{
     text-align: center;
-    display: flex;
-    justify-content: center;
     margin-bottom: 20px;
+    font-size: $fontSizeB;
+    a{
+        color: black;
+        text-decoration: none;
+    }
+}
+
+.footer__content__mail-icon{
+    margin-right: 5px;
+}
+
+.footer__content__gitHub-icon{
+    transition: .2s ease;
+}
+
+.footer__content__gitHub-icon:hover{
+    color: purple;
 }

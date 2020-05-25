@@ -1,7 +1,46 @@
 // MEDIA QUERIES
 @media (min-width: 320px) and (max-width: 480px) {
+    .jumbotron__console-window{
+        height: 30%;
+    }
    .jumbotron__console-window__text{
+       font-size: $fontSizeM * 1.1;
+   }
+   .about-me{
+       width: 100%;
+       font-size: $fontSizeS;
+   }
+   .about-me__box{
+       margin: 0;
+       padding: 20px;
+       box-shadow: none;
+       background-color: darken($third-color, 20%);
+   }
+   .projects__projectBox{
+       width: 300px;
+   }
+   .footer__content{
        font-size: $fontSizeM;
    }
 }
-    
+
+@media (max-width: 860px){
+    .skill-set__column{
+    margin: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    max-width: 520px;
+    }
+    .skill-set__column_content-basic{
+        grid-row: 2/3;
+        grid-column: 1/2;
+    }
+    .skill-set__column_content-frameworks{
+        grid-row: 3/4;
+        grid-column: 1/2;
+    }
+    .skill-set__column_content-skill{
+        grid-row: 1/2;
+        grid-column: 1/2;
+    }
+}

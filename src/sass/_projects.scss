@@ -27,13 +27,12 @@
     border: 3px solid $second-color;
     border-radius: 10px;
     box-shadow: -1px 1px 15px $second-color;
-    min-width: 450px;
-    min-height: 250px;
+    min-width: 300px;
+    min-height: 300px;
     max-width: 500px;
     max-height: 500px;
-    margin: 20px 0;
+    margin: 20px 10px;
     text-align: center;
-    background-color: red;
     z-index: 1;
     transition: .3s ease;
     &:hover{
@@ -71,11 +70,14 @@
 }
 .portfolio{
     background-image: url("/images/portfolio.png");
+    background-repeat: no-repeat;
+    background-position: center center;
     background-size: cover;
 }
 
 .tic_tac_toe{
     background-image: url("/images/tictactoe.png");
+    background-repeat: no-repeat;
     background-size: cover;
 }
 

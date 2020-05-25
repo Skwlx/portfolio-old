@@ -15,11 +15,6 @@ class displaySkill {
                 }, time * 250);
             })
         }
-        else{
-            this.listEl.forEach((li)=>{
-                li.classList.remove("skill-set__column__skills__elements--animated");
-            })
-        }
     }
 }
 
