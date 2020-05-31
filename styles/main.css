@@ -1,0 +1,349 @@
+@keyframes consoleBlink {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes linkUp {
+  0% {
+    text-shadow: 2px 1px 11px; }
+  100% {
+    text-shadow: -2px -1px 0px; } }
+
+@keyframes displayIn {
+  0% {
+    opacity: 1;
+    transform: scaleX(0.2); }
+  25% {
+    transform: scaleX(1); }
+  75% {
+    transform: scaleX(0.2); }
+  100% {
+    transform: scaleX(1); } }
+
+@keyframes borderLight {
+  0% {
+    box-shadow: -1px 1px 15px white; }
+  100% {
+    box-shadow: -1px 1px 30px white; } }
+
+body {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  color: white; }
+
+main {
+  width: 100%;
+  z-index: 1;
+  margin: 0;
+  overflow-x: hidden; }
+
+footer {
+  font-size: 1.1rem;
+  width: 100%;
+  height: 10vh;
+  z-index: 1;
+  color: black; }
+
+.jumbotron {
+  height: 100%;
+  background-color: black;
+  position: relative; }
+
+.jumbotron__console-window {
+  background-color: white;
+  box-sizing: border-box;
+  border-radius: 10px;
+  background-color: black;
+  border: 0.1px solid white;
+  color: green;
+  width: 45%;
+  height: 50%;
+  margin: auto;
+  max-width: 700px;
+  min-width: 300px;
+  min-height: 320px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 5px 10px 0px white; }
+
+.jumbotron__console-window__bar {
+  width: 100%;
+  height: 20px;
+  background-color: white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px; }
+
+.jumbotron__console-window__bar__button {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background-color: #cc0000;
+  display: inline-block;
+  margin-left: 5px;
+  margin-top: 5px; }
+  .jumbotron__console-window__bar__button:nth-child(2) {
+    background-color: #f09b00; }
+  .jumbotron__console-window__bar__button:nth-child(3) {
+    background-color: #007b00; }
+
+.jumbotron__console-window__text {
+  font-size: 1.5rem;
+  font-family: "Quantico", sans-serif;
+  text-shadow: 2px 1px 1px #00fa00;
+  padding: 0 5px 0 5px; }
+  .jumbotron__console-window__text::after {
+    content: "_";
+    animation: consoleBlink 0.4s infinite linear; }
+
+canvas {
+  position: relative; }
+
+.about-me {
+  width: 100vw;
+  padding: 3% 0;
+  background-color: #4d4d4d;
+  display: flex;
+  margin: 0; }
+
+.about-me__box {
+  background-color: black;
+  box-shadow: 0px 2px 25px 0px black;
+  border-radius: 20px;
+  width: 90%;
+  margin: auto 10%;
+  padding: 50px;
+  color: black; }
+  .about-me__box h2 {
+    margin: 0;
+    padding: 10px 0 20px 10px;
+    text-align: left; }
+
+.about-me__text {
+  background-color: white;
+  font-family: "Montserrat", sans-serif;
+  border-radius: 20px;
+  padding-bottom: 20px;
+  box-shadow: 0px 2px 25px 0px rgba(255, 255, 255, 0.75); }
+  .about-me__text p {
+    margin-left: 30px;
+    margin-right: 30px; }
+
+.skill-set {
+  background-color: black;
+  width: 100%;
+  padding-top: 70px;
+  position: relative;
+  display: flex;
+  justify-content: left;
+  flex-wrap: wrap;
+  padding-bottom: 120px; }
+  .skill-set svg {
+    position: absolute;
+    top: 0;
+    z-index: 0;
+    transform: rotate(180deg);
+    fill: #4d4d4d;
+    width: 120%; }
+  .skill-set h1 {
+    width: 100%;
+    margin-bottom: 0;
+    z-index: 1;
+    text-align: center; }
+
+.skill-set__column {
+  width: 100%;
+  min-height: 635px;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  margin-top: 40px; }
+  .skill-set__column .skill-set__column__header {
+    animation: linkUp .8s ease-in infinite alternate;
+    margin-top: 15px;
+    text-shadow: 2px 1px 11px;
+    font-size: 1.65rem; }
+  .skill-set__column .skill-set__column_content {
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom: 5px solid white;
+    margin: auto 15px;
+    transition: 0.3s ease; }
+    .skill-set__column .skill-set__column_content:hover {
+      box-shadow: -1px 7px 3px white; }
+  .skill-set__column .skill-set__column__skills__elements {
+    padding: 0;
+    list-style: none; }
+    .skill-set__column .skill-set__column__skills__elements .skill-set__column__skills__element {
+      width: 250px;
+      margin: auto;
+      margin-top: 10px;
+      font-size: 1.2rem; }
+      .skill-set__column .skill-set__column__skills__elements .skill-set__column__skills__element::after {
+        opacity: 0;
+        content: "";
+        width: 40%;
+        display: block;
+        height: 2px;
+        margin: auto; }
+
+.skill-set__column_content-basic {
+  grid-row: 2/3;
+  grid-column: 2/3;
+  border-left: 5px solid white;
+  border-right: 5px solid white; }
+
+.skill-set__column_content-frameworks {
+  grid-row: 1/2;
+  grid-column: 3/4; }
+
+.skill-set__column__skills__elements--animated::after {
+  animation: displayIn 3s linear;
+  opacity: 0;
+  content: "";
+  width: 40%;
+  display: block;
+  height: 2px;
+  background-color: #fff;
+  margin: auto; }
+
+.projects {
+  background-color: black;
+  margin-bottom: 150px;
+  padding-bottom: 50px;
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  justify-content: space-around; }
+  .projects h2 {
+    margin: 0;
+    margin-bottom: 120px;
+    padding: 0;
+    text-align: center;
+    width: 100%; }
+  .projects svg {
+    position: absolute;
+    bottom: 0;
+    z-index: 0;
+    transform: rotate(180deg);
+    width: 100%; }
+
+.projects__projectBox {
+  width: 33%;
+  border: 3px solid white;
+  border-radius: 10px;
+  box-shadow: -1px 1px 15px white;
+  min-width: 300px;
+  min-height: 300px;
+  max-width: 500px;
+  max-height: 500px;
+  margin: 20px 10px;
+  text-align: center;
+  z-index: 1;
+  transition: .3s ease; }
+  .projects__projectBox:hover {
+    border-color: grey;
+    animation: borderLight .8s ease-in infinite alternate; }
+
+.projects__projectBox__title {
+  font-size: 1.5rem;
+  width: 200px;
+  margin: 10px auto 80px auto; }
+
+.projects__projectBox__content {
+  width: 50%;
+  margin: auto;
+  margin-bottom: 50px;
+  font-size: 1.2rem; }
+
+.projects__projectBox__button {
+  color: black;
+  text-decoration: none;
+  background-color: white;
+  padding: 8px;
+  margin: auto 7px;
+  border: 2px solid black;
+  transition: 0.2s ease-in;
+  border-radius: 5px; }
+  .projects__projectBox__button:hover {
+    color: white;
+    background-color: black;
+    border: 2px solid white; }
+
+.portfolio {
+  background-image: url("/images/portfolio.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover; }
+
+.tic_tac_toe {
+  background-image: url("/images/tictactoe.png");
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.exchange {
+  background-image: url("/images/exchange.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center; }
+
+.projects__projectBox__title, .projects__projectBox__content {
+  background-color: black; }
+
+.footer__content {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.5rem; }
+  .footer__content a {
+    color: black;
+    text-decoration: none; }
+
+.footer__content__mail-icon {
+  margin-right: 5px; }
+
+.footer__content__gitHub-icon {
+  transition: .2s ease; }
+
+.footer__content__gitHub-icon:hover {
+  color: purple; }
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .jumbotron__console-window {
+    height: 30%; }
+  .jumbotron__console-window__text {
+    font-size: 1.1rem; }
+  .about-me {
+    width: 100%;
+    font-size: 0.9rem; }
+  .about-me__box {
+    margin: 0;
+    padding: 20px;
+    box-shadow: none;
+    background-color: #4d4d4d; }
+  .projects__projectBox {
+    width: 300px; }
+  .footer__content {
+    font-size: 1rem; } }
+
+@media (max-width: 860px) {
+  .skill-set__column {
+    margin: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    max-width: 520px; }
+  .skill-set__column_content-basic {
+    grid-row: 2/3;
+    grid-column: 1/2; }
+  .skill-set__column_content-frameworks {
+    grid-row: 3/4;
+    grid-column: 1/2; }
+  .skill-set__column_content-skill {
+    grid-row: 1/2;
+    grid-column: 1/2; } }
+
