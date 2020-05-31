@@ -4,6 +4,7 @@ import Display from "./components/displaySkill";
 import "../sass/index.scss";
 import portfolio from "../images/portfolio.png";
 import ticTacToe from "../images/tictactoe.png";
+import exchange from "../images/exchange.png";
 
 window.addEventListener('DOMContentLoaded', () => {
     const star = new Stars(document.querySelector("#canvas"));
@@ -14,4 +15,5 @@ window.addEventListener('DOMContentLoaded', () => {
     });
     write.type();
     star.run();
+    ProjectHover();
 });

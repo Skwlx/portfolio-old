@@ -37,14 +37,16 @@
     transition: .3s ease;
     &:hover{
         border-color: $third-color;
+        animation:  borderLight .8s ease-in infinite alternate;
     }
 }
 
 .projects__projectBox__title{
     font-size: $fontSizeB;
-    width: 150px;
+    width: 200px;
     margin: 10px auto 80px auto;
 }
+
 
 .projects__projectBox__content{
     width: 50%;
@@ -79,6 +81,13 @@
     background-image: url("/images/tictactoe.png");
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.exchange{
+    background-image: url("/images/exchange.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
 }
 
 .projects__projectBox__title, .projects__projectBox__content{

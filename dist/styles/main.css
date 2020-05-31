@@ -21,12 +21,17 @@
   100% {
     transform: scaleX(1); } }
 
+@keyframes borderLight {
+  0% {
+    box-shadow: -1px 1px 15px white; }
+  100% {
+    box-shadow: -1px 1px 30px white; } }
+
 body {
   font-family: "Montserrat", sans-serif;
   margin: 0;
   padding: 0;
-  color: white;
-  overflow-x: hidden; }
+  color: white; }
 
 main {
   width: 100%;
@@ -58,7 +63,7 @@ footer {
   margin: auto;
   max-width: 700px;
   min-width: 300px;
-  min-height: 350px;
+  min-height: 320px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -106,7 +111,7 @@ canvas {
 
 .about-me__box {
   background-color: black;
-  box-shadow: 0px 2px 25px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 2px 25px 0px black;
   border-radius: 20px;
   width: 90%;
   margin: auto 10%;
@@ -151,7 +156,6 @@ canvas {
 
 .skill-set__column {
   width: 100%;
-  min-width: 520px;
   min-height: 635px;
   z-index: 1;
   display: grid;
@@ -235,21 +239,21 @@ canvas {
   border: 3px solid white;
   border-radius: 10px;
   box-shadow: -1px 1px 15px white;
-  min-width: 450px;
-  min-height: 250px;
+  min-width: 300px;
+  min-height: 300px;
   max-width: 500px;
   max-height: 500px;
-  margin: 20px 0;
+  margin: 20px 10px;
   text-align: center;
-  background-color: red;
   z-index: 1;
   transition: .3s ease; }
   .projects__projectBox:hover {
-    border-color: grey; }
+    border-color: grey;
+    animation: borderLight .8s ease-in infinite alternate; }
 
 .projects__projectBox__title {
   font-size: 1.5rem;
-  width: 150px;
+  width: 200px;
   margin: 10px auto 80px auto; }
 
 .projects__projectBox__content {
@@ -274,22 +278,72 @@ canvas {
 
 .portfolio {
   background-image: url("/images/portfolio.png");
+  background-repeat: no-repeat;
+  background-position: center center;
   background-size: cover; }
 
 .tic_tac_toe {
   background-image: url("/images/tictactoe.png");
+  background-repeat: no-repeat;
   background-size: cover; }
+
+.exchange {
+  background-image: url("/images/exchange.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center; }
 
 .projects__projectBox__title, .projects__projectBox__content {
   background-color: black; }
 
 .footer__content {
   text-align: center;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  font-size: 1.5rem; }
+  .footer__content a {
+    color: black;
+    text-decoration: none; }
+
+.footer__content__mail-icon {
+  margin-right: 5px; }
+
+.footer__content__gitHub-icon {
+  transition: .2s ease; }
+
+.footer__content__gitHub-icon:hover {
+  color: purple; }
 
 @media (min-width: 320px) and (max-width: 480px) {
+  .jumbotron__console-window {
+    height: 30%; }
   .jumbotron__console-window__text {
+    font-size: 1.1rem; }
+  .about-me {
+    width: 100%;
+    font-size: 0.9rem; }
+  .about-me__box {
+    margin: 0;
+    padding: 20px;
+    box-shadow: none;
+    background-color: #4d4d4d; }
+  .projects__projectBox {
+    width: 300px; }
+  .footer__content {
     font-size: 1rem; } }
+
+@media (max-width: 860px) {
+  .skill-set__column {
+    margin: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    max-width: 520px; }
+  .skill-set__column_content-basic {
+    grid-row: 2/3;
+    grid-column: 1/2; }
+  .skill-set__column_content-frameworks {
+    grid-row: 3/4;
+    grid-column: 1/2; }
+  .skill-set__column_content-skill {
+    grid-row: 1/2;
+    grid-column: 1/2; } }
 

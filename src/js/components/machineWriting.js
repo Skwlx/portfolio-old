@@ -1,9 +1,9 @@
 class Writing{
     constructor(){
-        this.message = ["Witaj, nazywam się Paweł",
-         " jestem początkującym programistą,", 
+        this.message = ["Witaj, nazywam się Paweł.",
+         " Jestem początkującym programistą,", 
         " web developerem,", 
-        " front-endowcem. Dobrze cie widzieć."
+        " front-endowcem. Dobrze Cię widzieć."
         ," #Front-end"," #Js", 
         ];
         this.textBox = document.querySelector(".jumbotron__console-window__text");

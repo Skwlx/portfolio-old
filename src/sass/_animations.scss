@@ -33,4 +33,11 @@
     }
 }
 
-
+@keyframes borderLight{
+    0%{
+        box-shadow: -1px 1px 15px $second-color;
+    }
+    100%{
+        box-shadow: -1px 1px 30px $second-color;
+    }
+}
