@@ -277,18 +277,18 @@ canvas {
     border: 2px solid white; }
 
 .portfolio {
-  background-image: url("images/portfolio.png");
+  background-image: url("/dist/images/portfolio.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover; }
 
 .tic_tac_toe {
-  background-image: url("images/tictactoe.png");
+  background-image: url("/dist/images/tictactoe.png");
   background-repeat: no-repeat;
   background-size: cover; }
 
 .exchange {
-  background-image: url("images/exchange.png");
+  background-image: url("/dist/images/exchange.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center; }
