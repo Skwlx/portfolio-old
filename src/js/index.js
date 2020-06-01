@@ -15,5 +15,4 @@ window.addEventListener('DOMContentLoaded', () => {
     });
     write.type();
     star.run();
-    ProjectHover();
 });
