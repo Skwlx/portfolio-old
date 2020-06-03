@@ -4,7 +4,9 @@ class Writing{
          " Jestem początkującym programistą,", 
         " web developerem,", 
         " front-endowcem. Dobrze Cię widzieć."
-        ," #Front-end"," #Js", 
+        ," #Front-end",
+        " #Js",
+        " ↓" 
         ];
         this.textBox = document.querySelector(".jumbotron__console-window__text");
         this.wordIndex = 0;
@@ -21,7 +23,7 @@ class Writing{
             this.messageIndex++;
             this.wordIndex = 0;
         }
-        setTimeout(()=>{requestAnimationFrame(() => this.type())}, 80);
+        setTimeout(()=>{requestAnimationFrame(() => this.type())}, 70);
     }
 }
 

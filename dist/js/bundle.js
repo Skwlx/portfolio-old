@@ -63,7 +63,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "421498d51c7ba54b9e33";
+/******/ 	var hotCurrentHash = "837694ba4a40f165ce40";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -927,7 +927,7 @@ eval("__webpack_require__.r(__webpack_exports__);\nclass displaySkill {\n    con
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\nclass Writing{\n    constructor(){\n        this.message = [\"Witaj, nazywam się Paweł.\",\n         \" Jestem początkującym programistą,\", \n        \" web developerem,\", \n        \" front-endowcem. Dobrze Cię widzieć.\"\n        ,\" #Front-end\",\" #Js\", \n        ];\n        this.textBox = document.querySelector(\".jumbotron__console-window__text\");\n        this.wordIndex = 0;\n        this.messageIndex = 0;\n    }\n\n    type(){\n        if(this.messageIndex > this.message.length -1)\n            return 0;\n        const letter = this.message[this.messageIndex].substr(this.wordIndex,1);\n        this.textBox.textContent += `${letter}`;\n        this.wordIndex++;\n        if(this.wordIndex === this.message[this.messageIndex].length){\n            this.messageIndex++;\n            this.wordIndex = 0;\n        }\n        setTimeout(()=>{requestAnimationFrame(() => this.type())}, 80);\n    }\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Writing);\n\n//# sourceURL=webpack:///./src/js/components/machineWriting.js?");
+eval("__webpack_require__.r(__webpack_exports__);\nclass Writing{\n    constructor(){\n        this.message = [\"Witaj, nazywam się Paweł.\",\n         \" Jestem początkującym programistą,\", \n        \" web developerem,\", \n        \" front-endowcem. Dobrze Cię widzieć.\"\n        ,\" #Front-end\",\n        \" #Js\",\n        \" ↓\" \n        ];\n        this.textBox = document.querySelector(\".jumbotron__console-window__text\");\n        this.wordIndex = 0;\n        this.messageIndex = 0;\n    }\n\n    type(){\n        if(this.messageIndex > this.message.length -1)\n            return 0;\n        const letter = this.message[this.messageIndex].substr(this.wordIndex,1);\n        this.textBox.textContent += `${letter}`;\n        this.wordIndex++;\n        if(this.wordIndex === this.message[this.messageIndex].length){\n            this.messageIndex++;\n            this.wordIndex = 0;\n        }\n        setTimeout(()=>{requestAnimationFrame(() => this.type())}, 70);\n    }\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Writing);\n\n//# sourceURL=webpack:///./src/js/components/machineWriting.js?");
 
 /***/ }),
 
