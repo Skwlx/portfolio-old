@@ -27,8 +27,8 @@
     border: 3px solid $second-color;
     border-radius: 10px;
     box-shadow: -1px 1px 15px $second-color;
-    min-width: 300px;
-    min-height: 300px;
+    min-width: 320px;
+    min-height: 320px;
     max-width: 500px;
     max-height: 500px;
     margin: 20px 10px;
@@ -45,6 +45,7 @@
     font-size: $fontSizeB;
     width: 200px;
     margin: 10px auto 80px auto;
+    border-radius: 20px;
 }
 
 
@@ -52,6 +53,8 @@
     width: 50%;
     margin: auto;
     margin-bottom: 50px;
+    border-radius: 20px;
+    padding: 5px;
     font-size: $fontSizeM*1.2;
 }
 

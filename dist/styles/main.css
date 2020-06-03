@@ -239,8 +239,8 @@ canvas {
   border: 3px solid white;
   border-radius: 10px;
   box-shadow: -1px 1px 15px white;
-  min-width: 300px;
-  min-height: 300px;
+  min-width: 320px;
+  min-height: 320px;
   max-width: 500px;
   max-height: 500px;
   margin: 20px 10px;
@@ -254,12 +254,15 @@ canvas {
 .projects__projectBox__title {
   font-size: 1.5rem;
   width: 200px;
-  margin: 10px auto 80px auto; }
+  margin: 10px auto 80px auto;
+  border-radius: 20px; }
 
 .projects__projectBox__content {
   width: 50%;
   margin: auto;
   margin-bottom: 50px;
+  border-radius: 20px;
+  padding: 5px;
   font-size: 1.2rem; }
 
 .projects__projectBox__button {
@@ -277,18 +280,18 @@ canvas {
     border: 2px solid white; }
 
 .portfolio {
-  background-image: url("/images/portfolio.png");
+  background-image: url("../images/portfolio.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover; }
 
 .tic_tac_toe {
-  background-image: url("/images/tictactoe.png");
+  background-image: url("../images/tictactoe.png");
   background-repeat: no-repeat;
   background-size: cover; }
 
 .exchange {
-  background-image: url("/images/exchange.png");
+  background-image: url("../images/exchange.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center; }
